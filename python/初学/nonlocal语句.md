@@ -1,4 +1,4 @@
-##Nonlocal语句
+## Nonlocal语句
 
 在内嵌函数中如何修改闭包中的变量呢？这时候就到了nonlocal出场了。
 
