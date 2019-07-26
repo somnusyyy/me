@@ -11,6 +11,6 @@ def get_all_links_from(channel):
 if __name__ == '__main__':
     pool = Pool()
     # pool = Pool(processes=6)
-    pool.map(get_all_links_from,channel_list.split())
+    pool.map(get_all_links_from,channel_links.split())
 
 
