@@ -13,7 +13,6 @@ class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
-    @property
     def get_queryset(self):
         """返回最后发布的五个问题"""
         return Question.objects.filter(
