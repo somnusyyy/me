@@ -31,8 +31,7 @@ class QuestionModelTests(TestCase):
 
 def create_question(question_text, days):
     time = timezone.now() + datetime.timedelta(days=days)
-    return Question.objects.create(question_text=question_text
-                                   , pub_date=time)
+    return Question.objects.create(question_text=question_text, pub_date=time)
 
 
 class QuestionIndexTests(TestCase):
@@ -62,7 +61,7 @@ class QuestionIndexTests(TestCase):
         self.assertContains(response, "No polls are available")
         self.assertQuerysetEqual(response.context['latest_question_list'], [])
 
-    def test_past_question(self):
+    def Test_past_question(self):
         create_question(question_text="past question",days=-30)
         response=self.client.get(reverse('polls:index'))
         self.assertQuerysetEqual(
@@ -70,7 +69,7 @@ class QuestionIndexTests(TestCase):
             ['<Question: past question>']
         )
 
-    def test_future_question(self):
+    def Test_future_question(self):
         create_question(question_text="future question",days=30)
         response=self.client.get(reverse('polls:index'))
         self.assertContains(response, "No polls are available")
