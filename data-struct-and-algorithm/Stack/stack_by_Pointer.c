@@ -32,7 +32,7 @@ stack createStack(void){
     return S;
 }
 
-void disposeStack(stack S){     //ÖÃ¿ÕÕ»
+void disposeStack(stack S){     
     while(!isEmpty(S)){
         pop(S);
     }
@@ -63,5 +63,11 @@ ElementType pop(stack S){
         printf("Stack is empty\n");
         return;
     }
-
+    PNODE P;
+    ElementType temp;
+    P=S->Next;
+    temp=p->Element;
+    S->Next=P->Next;
+    free(P);
+    return temp;
 }
