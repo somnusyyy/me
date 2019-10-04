@@ -69,6 +69,7 @@ int match(char str,char temp){
 
 int main()
 {
+    int count=0;
     stack S;
     S=(stack)malloc(sizeof(NODE));
     if(NULL==S) printf("out of space.\n");
@@ -84,9 +85,11 @@ int main()
 //                return;
 //            }
             char temp=top(S);
-//            printf("%c",temp);
-            if(match(str[i],temp)){
-                printf("%c,%c\n",str[i],temp);
+//            printf("%c %d\n",temp,match(str[i],temp));
+
+            if(match(temp,str[i])){
+                count++;
+//                printf("%c,%c\n",temp,str[i]);
                 pop(S);
             }
 
@@ -94,7 +97,7 @@ int main()
         }
     }
 //    printf("%d\n",isEmpty(S));
-    if(!isEmpty(S)) printf("success.\n");
+    if(count==strlen(str)/2&&strlen(str)%2==0) printf("success.\n");
     else printf("fail.\n");
     return 0;
 }
