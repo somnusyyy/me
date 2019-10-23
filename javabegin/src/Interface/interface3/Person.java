@@ -1,4 +1,4 @@
-package interface3;
+package Interface.interface3;
 
 public abstract class Person {
     public String name;

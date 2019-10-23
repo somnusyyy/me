@@ -1,4 +1,4 @@
-package interface3;
+package Interface.interface3;
 
 public class Demo {
     public static void main(String[] args) {

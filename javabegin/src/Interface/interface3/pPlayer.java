@@ -1,4 +1,4 @@
-package interface3;
+package Interface.interface3;
 
 public class pPlayer extends Player implements English{
     @Override

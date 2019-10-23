@@ -1,4 +1,4 @@
-package interface1;
+package Interface.interface1;
 
 public  class Dog extends Animal implements jumpping {
     @Override

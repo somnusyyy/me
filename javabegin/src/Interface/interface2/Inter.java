@@ -1,4 +1,4 @@
-package interface2;
+package Interface.interface2;
 
 /*
 接口没有构造方法

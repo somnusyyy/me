@@ -1,4 +1,4 @@
-package interface2;
+package Interface.interface2;
 
 public class InterImpl extends Object implements Inter {
     public InterImpl(){

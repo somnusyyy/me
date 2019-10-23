@@ -1,4 +1,4 @@
-package interface2;
+package Interface.interface2;
 
 public class InterfaceDemo {
     public static void main(String[] args) {
