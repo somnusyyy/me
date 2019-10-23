@@ -8,6 +8,7 @@ public class Outer {
         }
     }
 
+
     public void method(){
         Inner in=new Inner();
         in.show();//外部类使用内部类需要创建对象
