@@ -8,7 +8,7 @@ public class ShufflePokers {
         ArrayList<String> array=new ArrayList<String>();
 
         String colors[]={"♠","♥","♦","♣"};
-        String nums[]={"A","2","3","4","5","6","7","8","9","10","j","Q","K","A"};
+        String nums[]={"A","2","3","4","5","6","7","8","9","10","j","Q","K"};
 
         for(String color:colors){
             for(String num:nums){
