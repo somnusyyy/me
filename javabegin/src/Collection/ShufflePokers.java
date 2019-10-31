@@ -3,7 +3,7 @@ package Collection;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ShuffleCards {
+public class ShufflePokers {
     public static void main(String[] args) {
         ArrayList<String> array=new ArrayList<String>();
 
