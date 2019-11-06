@@ -1,4 +1,4 @@
-package Thread;
+package Thread.SuiDynastyRomance;
 
 public class stage extends Thread {
 
@@ -27,7 +27,7 @@ public class stage extends Thread {
         MrCheng.start();
 
         try {
-            MrCheng.join();
+            MrCheng.join();//join方法强制加入线程
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

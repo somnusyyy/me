@@ -1,4 +1,4 @@
-package Thread;
+package Thread.SuiDynastyRomance;
 
 public class KeyPersonThread extends Thread {
     public boolean KeepRunning=true;
