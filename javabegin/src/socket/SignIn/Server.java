@@ -18,10 +18,16 @@ public class Server {
         InputStreamReader isr=new InputStreamReader(is);
         BufferedReader br=new BufferedReader(isr);
 
-        String line = br.readLine();
-        while(line!=null){
+        String line = null;
+        while((line = br.readLine())!=null){
             System.out.print(line);
         }
+        socket.shutdownInput();
+
+        socket.close();
+        is.close();
+        isr.close();
+        br.close();
 
     }
 }
