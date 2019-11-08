@@ -1,9 +1,6 @@
 package socket.SignIn;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -12,22 +9,17 @@ public class Server {
         ServerSocket serverSocket = new ServerSocket(8878);
 
         System.out.println("**等待客户端连接**");
-        Socket socket = serverSocket.accept();
+        Socket socket =null;
+        while (true){
+            socket = serverSocket.accept();
+            ServerThread st=new ServerThread(socket);
+            st.start();
 
-        InputStream is = socket.getInputStream();
-        InputStreamReader isr=new InputStreamReader(is);
-        BufferedReader br=new BufferedReader(isr);
-
-        String line = null;
-        while((line = br.readLine())!=null){
-            System.out.print(line);
         }
-        socket.shutdownInput();
 
-        socket.close();
-        is.close();
-        isr.close();
-        br.close();
+
+//        socket.close();
+
 
     }
 }
