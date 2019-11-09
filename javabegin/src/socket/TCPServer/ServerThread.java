@@ -1,10 +1,9 @@
-package socket.SignIn;
+package socket.TCPServer;
 /*
 *使用多线程实现多端共用一台服务器
  */
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerThread extends Thread{

@@ -1,4 +1,4 @@
-package socket.SignIn;
+package socket.TCPServer;
 
 import java.io.*;
 import java.net.Socket;
@@ -30,11 +30,6 @@ public class Client {
         socket.close();
         os.close();
         pw.close();
-
-
-
-
-
 
     }
 }
