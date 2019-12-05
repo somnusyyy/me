@@ -16,6 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        find . -regex '.*requirements.txt$'
         pip install https://github.com/effigies/BitTornado/archive/python2.7.zip
     - name: Lint with flake8
       run: |
