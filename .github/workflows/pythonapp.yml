@@ -16,8 +16,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip freeze >requirements.txt
         find . -regex '.*requirements.txt$'
-        pip install https://github.com/effigies/BitTornado/archive/python2.7.zip
+        pip install -r requirements.txt
     - name: Lint with flake8
       run: |
         pip install flake8
